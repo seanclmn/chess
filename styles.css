@@ -1,0 +1,36 @@
+.box{
+    width: 500px;
+    height: 500px;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.row{
+    width: 500px;
+    height: 62.5px;
+
+    display: flex;
+    justify-content:space-evenly;
+
+}
+
+
+img{
+    width: 62.5px;
+    height: 62.5px;
+}
+
+.square{
+    width: 62.5px;
+    height: 62.5px;
+
+    display: inline-block;
+
+}
+#light{
+    background-color: rgb(255, 233, 213);
+}
+#dark{
+    background-color: brown;
+}
