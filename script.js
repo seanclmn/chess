@@ -2,8 +2,11 @@ let draggables = document.querySelectorAll("img")
 
 let containers = document.querySelectorAll(".square")
 
+let white_pieces = document.querySelectorAll("#w")
+let black_pieces = document.querySelectorAll("#b")
 
 
+console.log(white_pieces[0].draggable==true)
 //Dragging
 draggables.forEach(item => {
     item.addEventListener("dragstart",()=>{
@@ -12,6 +15,7 @@ draggables.forEach(item => {
     })
     item.addEventListener("dragend",()=>{
         item.classList.remove("dragging_now")
+        move()
     })
 })
 
@@ -39,6 +43,20 @@ containers.forEach(container =>{
 // })
 
 
+
+
+//This will make sure only one color can play at a time
+
+
+function move(){
+    if(white_pieces[0].draggable == true){
+        white_pieces.forEach(element => element.draggable=false)
+        black_pieces.forEach(element => element.draggable=true)
+    }else{
+        white_pieces.forEach(element => element.draggable=true)
+        black_pieces.forEach(element => element.draggable=false) 
+    }
+}
 
 
 //Takeable function
