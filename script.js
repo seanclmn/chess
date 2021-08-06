@@ -20,35 +20,23 @@ containers.forEach(container =>{
         event.preventDefault()
         let draggable = document.querySelector(".dragging_now")
         let items = container.querySelectorAll("img")
-        console.log(items)
+        console.log(draggable.src[29])
+
         if(items.length==0){
             container.appendChild(draggable)
         }
         else if (takeable(items[0],draggable)){
             container.appendChild(draggable)
-            
         }
-        
     })
-
 })
 
 
 //Click and select
 
-draggables.forEach(item => {
+// draggables.forEach(item => {
     
-})
-
-
-
-
-
-
-
-
-
-
+// })
 
 
 
@@ -56,8 +44,13 @@ draggables.forEach(item => {
 //Takeable function
 
 function takeable(victim,attacker){
-    if(victim.src[8]!==attacker.src[8]){
+    if(victim.src[29]!==attacker.src[29]){
         victim.remove()
         return true
     }
 }
+
+
+piece_moves = [
+    
+]
